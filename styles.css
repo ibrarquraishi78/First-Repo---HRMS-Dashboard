@@ -10,7 +10,7 @@
 .sidebar {
     width: 250px;
     min-height: 100vh;
-    background: #7dddec;
+    background: #7dddec; 
     color: black;
     position: absolute;
     display: flex;
@@ -93,16 +93,16 @@ header button {
 }
 
 .search-container input[type="text"] {
-    padding-right: 30px;
-    width: 200px;
+    padding-right: 30px; 
+    width: 200px; 
 }
 
 .search-container img {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 10px; 
     transform: translateY(-50%);
-    width: 20px;
+    width: 20px; 
     height: auto;
     cursor: pointer;
 }
@@ -119,11 +119,11 @@ main {
 /* for team attachment */
 .header-link {
     color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    background: #ff5b5b;
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+    background:#ff5b5b ;
     padding: 10px 20px;
     transition: 3s;
 }
@@ -131,17 +131,19 @@ main {
 .header-link:hover {
     background: #1ee9e9;
     color: black;
-   
+    transition: 1s;
+}
+
 /* for notification icon */
 .notifications {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
 .notifications img,
 .profile img,
 .search-container img {
-    width: 20px;
+    width: 20px; 
     height: auto;
     vertical-align: left;
 }
@@ -269,35 +271,102 @@ main {
     margin-right: 15px;
 }
 
+/* media query start section */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        text-align: center;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header input[type="text"], header button, .search-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .content-sections {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .employee-details,
+    .new-employees {
+        width: 100%;
+        margin-bottom: 20px; /* Added margin-bottom for spacing */
+    }
+
+    .team-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .team-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .box {
+        height: auto;
+    }
+
+    #box1 {
+        margin-top: 900px;
+    }
+}
+
 /* teams section styling */
 .teams {
     background-color: black;
     color: #fff; /* Text color */
-    padding: 40px 0;
+    padding: 40px 0; 
     text-align: center;
     padding-top: 10px;
 }
 
 .team-container {
     max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto;
-    height: 500px;
+    margin: 0 auto; 
+    height: auto;
     padding-top: 50px;
 }
 
 .team-cards {
     display: flex;
-    justify-content: center;
-    overflow-x: auto;
+    flex-direction: column; /* For mobile view */
     gap: 20px;
     padding-bottom: 20px;
-    height: 400px;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .team-cards {
+        flex-direction: row; /* For web view */
+    }
 }
 
 .card {
-    flex: 0 0 auto;
-    width: 300px;
-    background: #7dddec;
+    flex: 0 0 auto; 
+    width: 100%; 
+    background: #7dddec; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -330,62 +399,4 @@ p {
 
 .teams .team-container .title {
     padding-bottom: 30px;
-}
-
-/* Media Queries */
-
-/* For mobile view */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: 100px;
-        position: static;
-        text-align: center;
-    }
-
-    .main-content {
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        visibility: hidden;
-    }
-
-    .stats {
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-    }
-
-    .content-sections {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-
-    .employee-details,
-    .new-employees {
-        width: 100%;
-        margin-bottom: 20px; /* Added margin-bottom for spacing */
-    }
-
-    .team-cards {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-    }
-
-    .team-container {
-        height: auto;
-        width: 100%;
-    }
-
-    .box {
-        height: auto;
-    }
-
-    #box1 {
-        margin-top: 900px;
-    }
 }
