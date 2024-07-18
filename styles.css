@@ -275,18 +275,25 @@ main {
 @media (max-width: 1200px) {
     .sidebar {
         width: 100%;
-        height: 100px;
+        height: auto;
         position: static;
         text-align: center;
     }
 
     .main-content {
         margin: 0;
-        padding: 0;
+        padding: 20px;
     }
 
     header {
-        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header input[type="text"], header button, .search-container {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .stats {
@@ -308,9 +315,10 @@ main {
     }
 
     .team-cards {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         height: auto;
+        justify-content: center;
     }
 
     .team-container {
@@ -339,7 +347,7 @@ main {
 .team-container {
     max-width: 1200px; /* Adjust max-width as needed */
     margin: 0 auto; 
-    height: 500px;
+    height: auto;
     padding-top: 50px;
 }
 
@@ -349,7 +357,7 @@ main {
     overflow-x: auto; 
     gap: 20px; 
     padding-bottom: 20px; 
-    height: 400px; 
+    height: auto; 
 }
 
 .card {
