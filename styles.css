@@ -333,6 +333,7 @@ main {
     }
 }
 
+
 /* teams section styling */
 .teams {
     background-color: black;
@@ -349,44 +350,48 @@ main {
     padding-top: 50px;
 }
 
-@media (min-width: 1200px) {
-    .team-cards {
-        display: flex;
-        flex-direction: row; /* Display cards horizontally */
-        flex-wrap: wrap; /* Allow cards to wrap if space is limited */
-        justify-content: space-between; /* Distribute cards evenly */
-    }
+.team-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    height: auto;
+}
 
-    .card {
-        flex: 0 0 calc(30% - 20px); /* Adjust card width for three cards in a row */
-        background: #7dddec; /* Card background color */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-        overflow: hidden; /* Ensure content doesn't overflow */
-        margin-bottom: 20px; /* Spacing between cards */
-    }
+.card {
+    flex: 0 0 auto; 
+    width: 100%; 
+    background: #7dddec; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
 
-    .card img {
-        width: 100%; /* Full width for images inside cards */
-        height: auto; /* Maintain aspect ratio */
-        border-top-left-radius: 8px; /* Rounded corners for top left */
-        border-top-right-radius: 8px; /* Rounded corners for top right */
-    }
+.box {
+    padding: 20px;
+}
 
-    .card .box {
-        padding: 20px; /* Padding inside each card */
-    }
+.box img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
-    .card .text {
-        font-size: 20px; /* Font size for card text */
-        font-weight: bold; /* Bold font weight */
-        margin-top: 10px; /* Spacing from top */
-    }
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+}
 
-    .card p {
-        font-size: 14px; /* Smaller font size for paragraph */
-        color: black; /* Black text color */
-        margin-top: 10px; /* Spacing from top */
-        line-height: 1.6; /* Line height for readability */
-    }
+p {
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.teams .team-container .title {
+    padding-bottom: 30px;
 }
