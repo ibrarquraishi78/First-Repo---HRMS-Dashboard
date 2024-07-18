@@ -351,20 +351,15 @@ main {
 
 .team-cards {
     display: flex;
-    flex-direction: column; /* For mobile view */
+    flex-direction: row; /* Original horizontal layout */
     gap: 20px;
     padding-bottom: 20px;
     height: auto;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .team-cards {
-        flex-direction: row; /* For web view */
-        gap: 10px;
-    }
-
-    .card {
-        width: 30%; /* Adjust the width to fit all three cards in one row */
+        flex-direction: column; /* Vertical layout for mobile view */
     }
 }
 
