@@ -315,12 +315,8 @@ main {
     }
 
     .team-cards {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 20px; 
-        padding-bottom: 20px; 
-        height: auto;
+        flex-direction: column;
+        width: 100%;
     }
 
     .team-container {
@@ -355,16 +351,15 @@ main {
 
 .team-cards {
     display: flex;
-    justify-content: center;
-    overflow-x: auto; 
-    gap: 20px; 
-    padding-bottom: 20px; 
-    height: auto; 
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    height: auto;
 }
 
 .card {
     flex: 0 0 auto; 
-    width: 300px; 
+    width: 100%; 
     background: #7dddec; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
