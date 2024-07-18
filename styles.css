@@ -360,6 +360,11 @@ main {
 @media (min-width: 769px) {
     .team-cards {
         flex-direction: row; /* For web view */
+        gap: 10px;
+    }
+
+    .card {
+        width: 30%; /* Adjust the width to fit all three cards in one row */
     }
 }
 
