@@ -316,9 +316,11 @@ main {
 
     .team-cards {
         flex-direction: row;
-        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px; 
+        padding-bottom: 20px; 
         height: auto;
-        justify-content: center;
     }
 
     .team-container {
